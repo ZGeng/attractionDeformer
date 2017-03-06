@@ -47,6 +47,9 @@ MStatus AttractionDeformer::accessoryNodeSetup(MDagModifier& dagMod)
 	//create a sphere to make the locator easier to select 
 	MObject oSphereTrans = dagMod.createNode(MString("transform"), MObject::kNullObj, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
+	MFnDagNode fnSphereTrans(oSphereTrans);
+	fnSphereTrans.setName("attractor", false, &status);
+	CHECK_MSTATUS_AND_RETURN_IT(status);
 	MObject oSphereShape = dagMod.createNode(MString("mesh"), oSphereTrans, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
