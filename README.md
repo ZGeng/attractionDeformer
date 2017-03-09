@@ -1,6 +1,6 @@
 # attractionDeformer
 A maya attraction deformer node (plugin).
-* Load the .mll plugin, select the original mesh and excute command  
+* Load the [.mll](https://github.com/ZGeng/attractionDeformer/blob/master/attractionDeformer.mll) plugin, select the original mesh and excute command  
   "deformer -type attractionDeformer".
 
   
